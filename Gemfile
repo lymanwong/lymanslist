@@ -17,8 +17,8 @@ gem 'activerecord', '~>4.1'
 gem 'rake'
 
 gem 'shotgun'
-gem 'faker'
+gem 'rspec'
 
 group :test do
-  gem 'rspec'
+  gem 'faker'
 end
