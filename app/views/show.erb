@@ -1,0 +1,29 @@
+<h3>Choose one of the articles from the <%= @category.name %> category:</h3>
+<% if @articles %>
+<ul>
+  <% @articles.each do |article| %>
+  <li><a href='/articles/<%= article.id %>'><%= article.title %></a></li>
+  <% end %>
+</ul>
+<% end %>
+
+<h4>or add a new article!</h4>
+<form action="/articles" method="post">
+  <label for="author">Your Name:</label>
+  <input type="text" name="author" placeholder="Your Name" />
+</br>
+<label for="author">Article Title:</label>
+<input type="text" name="title" placeholder="Article Title" />
+</br>
+<label for="content">Content:</label>
+<input type="text" name="content" placeholder="Content" />
+</br>
+</br>
+<input type="submit" value="Add an article!"
+name="Submit" id="frm1_submit">
+</form>
+</br>
+</br>
+
+<a href="/">Home</a><br>
+<a href="/categories/new">Add a new article</a>

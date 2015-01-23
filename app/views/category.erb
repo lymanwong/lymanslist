@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Welcome to Craigslist Jr.</h1>
+  <h3>Pick a category of interest</h3>
+  <ul>
+    <% @categories.each do |category| %>
+    <li><a href="/categories/<%= category.id%>/articles">
+      <%= category.name %></a>
+    </li>
+    <% end %>
+  </ul>
+  <h3>or create</a> a new category</h3>
+  <form action="/categories" method="post">
+    <label for="author">Category Name:</label>
+    <input type="text" name="name" placeholder="New Category" />
+  </br>
+</br>
+<input type="submit" value="Add a category!"
+name="Submit" id="frm1_submit">
+</form>
+</div>
